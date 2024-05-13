@@ -11,7 +11,7 @@ Tento projekt implementuje jednoduchou webovou aplikaci pro vyhledávání na Go
 Nejprve si stáhněte obsah tohoto repozitáře:
 
 ```bash
-git clone https://github.com/[username]/[repo_name].git
+git clone https://github.com/Vyhledání na Google.git
 cd [repo_name]
 Poté nainstalujte závislosti pomocí následujícího příkazu:
 
