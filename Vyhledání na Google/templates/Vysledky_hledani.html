@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Výsledky hledání</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/Google_2.jpeg');
+            /* Přidáme obrázek jako pozadí */
+            background-size: cover; /* Zajistí, aby obrázek pokryl celé pozadí */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7); /* Přidáme průhledný bílý pozadí pro obsah */
+        }
+        button, a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Výsledky hledání</h1>
+        <ul>
+            {% for vysledek in vysledky_hledani %}
+                <li><a href="{{ vysledek }}">{{ vysledek }}</a></li>
+            {% endfor %}
+        </ul>
+        
+        <!-- Tlačítko pro stahování výsledků vyhledávání -->
+        <form action="/download" method="post">
+            <input type="hidden" name="dotaz" value="{{ dotaz }}">
+            <button type="submit" class="button">Stáhnout výsledky</button>
+        </form>
+      
+        <!-- Tlačítko pro návrat na stránku s vyhledávacím formulářem -->
+        <a href="/" class="button">Zpět na vyhledávání</a>
+    </div>
+</body>
+</html>

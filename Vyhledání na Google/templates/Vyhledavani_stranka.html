@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vyhledávání na Google</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/Google_1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Připojí obrázek pozadí */
+            height: 100vh; /* Nastaví výšku stránky na 100% výšky okna prohlížeče */
+            display: flex;
+            justify-content: center; /* Vodorovné zarovnání obsahu na střed */
+            align-items: center; /* Svislé zarovnání obsahu na střed */
+        }
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            text-align: center; /* Zarovná text na střed */
+            border-radius: 10px; /* Zaoblené hrany */
+        }
+        button, a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px; /* Odstup od horního okraje */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vyhledávání na Google</h1>
+        <form action="/results" method="post">
+            <label for="dotaz">Zadejte klíčové slovní spojení:</label><br />
+            <input type="text" id="dotaz" name="dotaz" /><br />
+            <button type="submit" class="button">Vyhledat</button>
+        </form>
+    </div>
+</body>
+</html>

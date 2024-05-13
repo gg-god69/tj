@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chyba</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("/static/Google_chyba.jpg"); /* Obrázek pozadí */
+        background-size: cover; /* Zajistí, aby obrázek pokryl celé pozadí */
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.7
+        ); /* Přidáme průhledný bílý pozadí pro obsah */
+        text-align: center; /* Zarovnáme obsah na střed */
+      }
+      button,
+      a.button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px; /* Odsazení od nadřazeného elementu */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Chyba</h1>
+      <p>Pole hledání nebylo vyplněno.</p>
+      <button onclick="window.history.back()" class="button">
+        Zpět na vyhledávání
+      </button>
+    </div>
+  </body>
+</html>
